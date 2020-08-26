@@ -167,7 +167,6 @@ function Calculator() {
     };
   
     return (
-     <Ambience>
         <CalcContainer>
             <CalculatorInput>
                 <Result>{nextValue} </Result>
@@ -200,7 +199,6 @@ function Calculator() {
                 </KeysNumbers>
             </CalculatorKeypad>
         </CalcContainer>
-    </Ambience>
     );
 }
 
