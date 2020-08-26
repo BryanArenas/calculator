@@ -3,18 +3,18 @@ import styled from '@emotion/styled'
 import CalculatorKey from '././CalculatorKey'
 
 const CalcContainer = styled.div`
+    padding-top: 1rem;
     width: 20rem;
-    height: 30rem;
+    height: 30.2rem;
     background-color: #1C1C1C;
     display: grid;
-    margin: 5px 0px 0px 0px;
-    position: absolute;
-    top: 0;
+    margin: auto;
+    position: relative;
+    top: 10rem;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    border: solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
 
@@ -22,19 +22,20 @@ const CalculatorInput = styled.div`
     text-align: right;
     padding-left: 10%;
     font-family: "Arial", Helvetica, sans-serif;
-    margin: 10px 10px 10px 0px;
+    margin: 10px 15px 10px 0px;
     font-size: xxx-large;
+    overflow: scroll;
 `
 
 const Result = styled.div`
-    min-height: 3rem;
+    min-height: 4rem;
     color: white;
+    
 
 `
 
 const CalculatorKeypad = styled.div`
-    
-    width: 20.1rem;
+    width: 20rem;
     background-color: #1C1C1C;
     display: grid;
     grid-template-columns: repeat(4, 5rem);
@@ -54,6 +55,9 @@ const KeysFunction = styled.div`
         background-color: #c1c1c1;
     }
 
+   
+
+
 `
 
 const KeysOperators = styled.div`
@@ -61,16 +65,15 @@ const KeysOperators = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 5rem);
     direction: rtl;
-
-    
-    
+  
     .orange {
         background: none;
         background-color: #ff9500;
         color: white;
         border-color: black;
-       
     }
+
+    
 
 `
 
@@ -79,19 +82,15 @@ const KeysNumbers = styled.div`
     direction: rtl;
     display: grid;
     grid-template-columns: repeat(3, 5rem);
-    
 
     .keyZero {
-        width: 9.15rem;
+        width: 9.19rem;
         text-align: left;
         padding-left: 15%;
     }
 
 `
 
-const KeyDot = styled.div`
-
-`
 
 function Calculator() {
     const [prevValue, setPrevValue] = useState(null);
@@ -168,6 +167,7 @@ function Calculator() {
     };
   
     return (
+     <Ambience>
         <CalcContainer>
             <CalculatorInput>
                 <Result>{nextValue} </Result>
@@ -200,6 +200,7 @@ function Calculator() {
                 </KeysNumbers>
             </CalculatorKeypad>
         </CalcContainer>
+    </Ambience>
     );
 }
 
