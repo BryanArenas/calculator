@@ -6,7 +6,7 @@ const Button = styled.div`
   font-size: 150%;
   height: 4.95rem;
   width: 4.95rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Arial", Helvetica, sans-serif;
   background: rgb(226,226,226);
   background: radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(212,212,210,1) 81%);
   opacity: 1;

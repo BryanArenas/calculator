@@ -31,8 +31,6 @@ const CalculatorInput = styled.div`
 const Result = styled.div`
     min-height: 4rem;
     color: white;
-    vertical-align: middle;
-
 `
 
 const CalculatorKeypad = styled.div`
