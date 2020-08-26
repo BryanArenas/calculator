@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import CalculatorKey from '././CalculatorKey'
 
 const CalcContainer = styled.div`
-    width: 20.1rem;
+    width: 20rem;
     height: 30rem;
     background-color: #1C1C1C;
     display: grid;
-    margin: 5px 5px 5px 5px;
+    margin: 5px 0px 0px 0px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -33,8 +33,9 @@ const Result = styled.div`
 `
 
 const CalculatorKeypad = styled.div`
+    
     width: 20.1rem;
-    background-color: #D4D4D2;
+    background-color: #1C1C1C;
     display: grid;
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: repeat(5, 5rem);
@@ -47,7 +48,11 @@ const KeysFunction = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 5rem);
     direction: rtl;
-    margin: 1px;
+    
+    .darker {
+        background: none;
+        background-color: #c1c1c1;
+    }
 
 `
 
@@ -56,9 +61,11 @@ const KeysOperators = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 5rem);
     direction: rtl;
-    margin: 1px;
+
+    
     
     .orange {
+        background: none;
         background-color: #ff9500;
         color: white;
         border-color: black;
@@ -72,10 +79,10 @@ const KeysNumbers = styled.div`
     direction: rtl;
     display: grid;
     grid-template-columns: repeat(3, 5rem);
-    margin: 1px;
+    
 
     .keyZero {
-        width: 8.9rem;
+        width: 9.15rem;
         text-align: left;
         padding-left: 15%;
     }
@@ -149,7 +156,7 @@ function Calculator() {
         if (prevValue && op && nextValue) {
           performOperation();
         }
-      } else if (value === "c") {
+      } else if (value === "C") {
         clearData();
       } else if (value === "\xB1") {
         changeSign();
@@ -167,9 +174,9 @@ function Calculator() {
             </CalculatorInput>
             <CalculatorKeypad>
                 <KeysFunction>
-                    <CalculatorKey keyValue={"C"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"\xB1"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"%"} onClick={handleOperation} />
+                    <CalculatorKey className="darker" keyValue={"C"} onClick={handleOperation} />
+                    <CalculatorKey className="darker" keyValue={"\xB1"} onClick={handleOperation} />
+                    <CalculatorKey className="darker" keyValue={"%"} onClick={handleOperation} />
                 </KeysFunction>
                 <KeysOperators>
                     <CalculatorKey className="orange" keyValue={"+"} onClick={handleOperation} />
