@@ -5,7 +5,7 @@ import CalculatorKey from '././CalculatorKey'
 const CalcContainer = styled.div`
     padding-top: 1rem;
     width: 20rem;
-    height: 30.2rem;
+    height: 30.22rem;
     background-color: #1C1C1C;
     display: grid;
     margin: auto;
