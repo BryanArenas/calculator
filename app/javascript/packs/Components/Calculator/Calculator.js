@@ -25,12 +25,13 @@ const CalculatorInput = styled.div`
     margin: 10px 15px 10px 0px;
     font-size: xxx-large;
     overflow: scroll;
+    
 `
 
 const Result = styled.div`
     min-height: 4rem;
     color: white;
-    
+    vertical-align: middle;
 
 `
 
@@ -41,7 +42,7 @@ const CalculatorKeypad = styled.div`
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: repeat(5, 5rem);
     grid-template-areas: "keys-function keys-function keys-function keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators";
-
+    
 `
 
 const KeysFunction = styled.div`
