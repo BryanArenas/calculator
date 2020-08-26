@@ -170,15 +170,8 @@ function Calculator() {
                     <CalculatorKey keyValue={3} onClick={handleOperation} />
                     <CalculatorKey keyValue={2} onClick={handleOperation} />
                     <CalculatorKey keyValue={1} onClick={handleOperation} />
-                    <CalculatorKey
-                        keyValue={"."}
-                        onClick={handleOperation}
-                    />
-                    <CalculatorKey
-                        className="keyZero"
-                        keyValue={0}
-                        onClick={handleOperation}
-                    />
+                    <CalculatorKey keyValue={"."} onClick={handleOperation} />
+                    <CalculatorKey className="keyZero" keyValue={0} onClick={handleOperation} />
                 </KeysNumbers>
             </CalculatorKeypad>
         </CalcContainer>
