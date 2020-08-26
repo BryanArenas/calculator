@@ -3,38 +3,38 @@ import styled from '@emotion/styled'
 import CalculatorKey from '././CalculatorKey'
 
 const CalcContainer = styled.div`
-    width: 20rem;
+    width: 20.1rem;
     height: 30rem;
-    background-color: lightcyan;
+    background-color: #1C1C1C;
     display: grid;
-    padding: 1%;
+    margin: 5px 5px 5px 5px;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    border: ridge;
+    border: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
 
 const CalculatorInput = styled.div`
-    border-color: black;
-    border: ridge;
     text-align: right;
-    padding-right: 10%;
-    font-weight: bold;
-    font-size: xx-large;
+    padding-left: 10%;
+    font-family: "Arial", Helvetica, sans-serif;
+    margin: 10px 10px 10px 0px;
+    font-size: xxx-large;
 `
 
 const Result = styled.div`
     min-height: 3rem;
-    color: #666666;
+    color: white;
 
 `
 
 const CalculatorKeypad = styled.div`
-    padding-top: 0.3rem;
-    background-color: lightblue;
+    width: 20.1rem;
+    background-color: #D4D4D2;
     display: grid;
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: repeat(5, 5rem);
@@ -44,20 +44,38 @@ const CalculatorKeypad = styled.div`
 
 const KeysFunction = styled.div`
     grid-area: keys-function;
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    direction: rtl;
+    margin: 1px;
 
 `
 
 const KeysOperators = styled.div`
     grid-area: keys-operators;
+    display: grid;
+    grid-template-columns: repeat(1, 5rem);
+    direction: rtl;
+    margin: 1px;
+    
+    .orange {
+        background-color: #ff9500;
+        color: white;
+        border-color: black;
+       
+    }
 
 `
 
 const KeysNumbers = styled.div`
     grid-area: keys-numbers;
     direction: rtl;
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    margin: 1px;
 
-    keyZero {
-        width: 9.1rem;
+    .keyZero {
+        width: 8.9rem;
         text-align: left;
         padding-left: 15%;
     }
@@ -149,16 +167,16 @@ function Calculator() {
             </CalculatorInput>
             <CalculatorKeypad>
                 <KeysFunction>
-                    <CalculatorKey keyValue={"c"} onClick={handleOperation} />
+                    <CalculatorKey keyValue={"C"} onClick={handleOperation} />
                     <CalculatorKey keyValue={"\xB1"} onClick={handleOperation} />
                     <CalculatorKey keyValue={"%"} onClick={handleOperation} />
                 </KeysFunction>
                 <KeysOperators>
-                    <CalculatorKey keyValue={"+"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"-"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"*"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"/"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"="} onClick={handleOperation} />
+                    <CalculatorKey className="orange" keyValue={"+"} onClick={handleOperation} />
+                    <CalculatorKey className="orange" keyValue={"-"} onClick={handleOperation} />
+                    <CalculatorKey className="orange" keyValue={"*"} onClick={handleOperation} />
+                    <CalculatorKey className="orange" keyValue={"/"} onClick={handleOperation} />
+                    <CalculatorKey className="orange" keyValue={"="} onClick={handleOperation} />
                 </KeysOperators>
                 <KeysNumbers>
                     <CalculatorKey keyValue={9} onClick={handleOperation} />

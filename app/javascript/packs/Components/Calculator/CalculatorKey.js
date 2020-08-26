@@ -2,14 +2,17 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Button = styled.div`
-  width: 4.2rem;
-  height: 4.2rem;
-  margin: 0.4rem;
+  background-color: #D4D4D2;
+  width: 4.7rem;
+  height: 4.7rem;
+  margin: .5px;
   text-align: center;
+  justify-content: center;
   font-size: 150%;
-  border-radius: 0.8rem;
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem grey;
-`
+  border: solid;
+  border-width: .5px;
+  font-family: "Times New Roman", Times, serif;
+  `
 
 function CalculatorKey(props) {
   return (
